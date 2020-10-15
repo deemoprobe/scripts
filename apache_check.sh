@@ -2,7 +2,7 @@
 # @Author: deemoprobe@gmail.com
 # @Date:   2020-09-28 09:08:12
 # @Last Modified by:   deemoprobe@gmail.com
-# @Last Modified time: 2020-10-14 16:26:34
+# @Last Modified time: 2020-10-15 09:13:58
 
 ##### 排查查找路径 #####
 u="/tmp"
@@ -17,5 +17,5 @@ APACHEFUNC()
         do
             APACHEPATH=`ls $APACHE_PATH | awk -F "/conf" '{print $1}'`
             CONFIGPATH=`$APACHEPATH/conf`
-            
+            APACHEVER=`$APACHEPATH/bin/apachectl -v | grep `
 }

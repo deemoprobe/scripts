@@ -2,8 +2,16 @@
 # @Author: deemoprobe@gmail.com
 # @Date:   2021-03-08 14:39:29
 # @Last Modified by:   deemoprobe@gmail.com
-# @Last Modified time: 2021-03-08 14:43:35
+# @Last Modified time: 2021-03-09 14:40:32
 # @Description: Weblogic LogCutting Script and Clear Rules
+####################### 后续操作 ########################
+# 由于echo > appserver1.out时appserver1.out一直在刷新日志
+# Null字符会在appserver1.out头部随着日志刷新生成
+# Null字符过多会导致appserver1.out文件被识别为二进制文件
+# 造成日志文件无法读取并且ls -al查看文件大小发现并没有切割过去
+# 虽然实际上已经切割了, 此时需要把受管启动脚本里的>改为>>
+# sed -i s/">"/">>"/g startappserver1.sh, 重启受管服务即可
+#########################################################
 
 export DEPLOY_DIR=/tpsys/applications/proddomain/logs
 

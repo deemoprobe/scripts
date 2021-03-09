@@ -2,7 +2,7 @@
 # @Author: deemoprobe@gmail.com
 # @Date:   2021-03-08 14:39:29
 # @Last Modified by:   deemoprobe@gmail.com
-# @Last Modified time: 2021-03-09 14:40:32
+# @Last Modified time: 2021-03-09 14:41:11
 # @Description: Weblogic LogCutting Script and Clear Rules
 ####################### 后续操作 ########################
 # 由于echo > appserver1.out时appserver1.out一直在刷新日志

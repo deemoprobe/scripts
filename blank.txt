@@ -1,8 +1,0 @@
-ps -ef | grep java | grep weblogic | grep appserver6
-if [ $? = 0 ]
-then
-        cp ${DEPLOY_DIR}/appserver6.out ${DEPLOY_DIR}/appserver6-`date +%Y-%m-%d-%H:%M:%S`.out
-        echo  > ${DEPLOY_DIR}/appserver6.out
-        cp ${DEPLOY_DIR}/appserver6.err ${DEPLOY_DIR}/appserver6-`date +%Y-%m-%d-%H:%M:%S`.err
-        echo  > ${DEPLOY_DIR}/appserver6.err
-fi
